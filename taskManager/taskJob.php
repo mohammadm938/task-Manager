@@ -46,6 +46,7 @@ if ($_GET['job'] == 'add') {
             <hr>
             <div id="text">
                 <label for="taskText" id="taskTextLabel">توضیحات تسک : </label>
+                <br>
                 <textarea id="taskText" name="text" cols="30" rows="10"><?php echo $results['text']; ?></textarea>
             </div>
             <div id="buttons">
@@ -60,13 +61,16 @@ if ($_GET['job'] == 'add') {
         <form action="" method="post">
             <div id="header">
                 <label for="taskTitle">عنوان تسک : </label>
+                <br>
                 <input id="taskTitle" name="title" maxlength="20" type="text" placeholder="عنوان تسک را وارد کنید ....">
             </div>
             <hr>
             <div id="text">
                 <label for="taskText" id="taskTextLabel">توضیحات تسک : </label>
+                <br>
                 <textarea name="task" id="taskText" name="text" cols="30" rows="10">توضیحات تسک را وارد کنید ....</textarea>
             </div>
+            <hr>
             <div id="buttons">
                 <button type="submit" href="#" id="add" name="add">افزودن</button>
             </div>
