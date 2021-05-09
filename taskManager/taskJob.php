@@ -5,7 +5,7 @@ $job;
 $title;
 if ($_GET['job'] == 'add') {
     $job = 'add';
-    $title = "اضافه کردن تسک جدید";
+    $title = "اضافه کردن برنامه جدید";
 } elseif ($_GET['job'] == 'edit') {
     $id = $_GET['id'];
     $job = 'edit';
@@ -40,12 +40,12 @@ if ($_GET['job'] == 'add') {
     ?>
         <form action="" method="post">
             <div id="header">
-                <label for="taskTitle">عنوان تسک : </label>
-                <input id="taskTitle" name="title" maxlength="20" type="text" placeholder="عنوان تسک را وارد کنید ...." value="<?php echo $results['title']; ?>">
+                <label for="taskTitle">عنوان برنامه : </label>
+                <input id="taskTitle" name="title" maxlength="20" type="text" placeholder="عنوان برنامه را وارد کنید ...." value="<?php echo $results['title']; ?>">
             </div>
             <hr>
             <div id="text">
-                <label for="taskText" id="taskTextLabel">توضیحات تسک : </label>
+                <label for="taskText" id="taskTextLabel">توضیحات برنامه : </label>
                 <br>
                 <textarea id="taskText" name="text" cols="30" rows="10"><?php echo $results['text']; ?></textarea>
             </div>
@@ -60,15 +60,15 @@ if ($_GET['job'] == 'add') {
     ?>
         <form action="" method="post">
             <div id="header">
-                <label for="taskTitle">عنوان تسک : </label>
+                <label for="taskTitle">عنوان برنامه : </label>
                 <br>
-                <input id="taskTitle" name="title" maxlength="20" type="text" placeholder="عنوان تسک را وارد کنید ....">
+                <input id="taskTitle" name="title" maxlength="20" type="text" placeholder="عنوان برنامه را وارد کنید ....">
             </div>
             <hr>
             <div id="text">
-                <label for="taskText" id="taskTextLabel">توضیحات تسک : </label>
+                <label for="taskText" id="taskTextLabel">توضیحات برنامه : </label>
                 <br>
-                <textarea name="task" id="taskText" name="text" cols="30" rows="10">توضیحات تسک را وارد کنید ....</textarea>
+                <textarea name="task" id="taskText" name="text" cols="30" rows="10">توضیحات برنامه را وارد کنید ....</textarea>
             </div>
             <hr>
             <div id="buttons">

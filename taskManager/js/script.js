@@ -11,6 +11,7 @@ function cheackSuccessDiv(done) {
             if(successDiv.classList.contains("successTrue")){
                 successDiv.classList.remove('successTrue');
             }
+            setTimeout(() => {  successDiv.style.visibility = 'hidden'; }, 2000);
         }else if(done === true){
             message = "با موفقیت افزوده شد";
             successDiv.classList.add("successTrue");

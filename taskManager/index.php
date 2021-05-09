@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="add">
-        <a href="taskJob.php?job=add">اضافه کردن تسک جدید</a>
+        <a href="taskJob.php?job=add">اضافه کردن برنامه جدید</a>
     </div>
     <?php foreach ($result as $value):?>
     <div id="content">
