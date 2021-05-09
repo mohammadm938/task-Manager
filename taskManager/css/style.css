@@ -35,6 +35,7 @@ td{
   box-shadow: #462f40 0px 0px 20px;
 }
 #header {
+  overflow: auto;
   background-color: #5a5959;
   color: rgb(236, 232, 232);
   text-align: center;
