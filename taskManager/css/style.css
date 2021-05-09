@@ -1,0 +1,114 @@
+@import "import.css";
+/* table,tr,th,td{
+    padding: 4px;
+    border: 2px gray solid;
+    border-collapse: collapse;
+}
+table{
+    background-color: #f0f0f0;
+    border: black 2px solid;
+    width: 500px;
+    margin: auto;
+}
+tr{
+    text-align: center;
+}
+th{
+    width: 40px;
+    font-size: 25px;
+}
+td{
+    font-size: 20px;
+} */
+
+#content {
+  background-color: #f7f3f3;
+  border: 2px black dashed;
+  border-radius: 5px;
+  box-shadow: #462f40 0px 0px 10px;
+  width: 300px;
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+#content:hover {
+  box-shadow: #462f40 0px 0px 20px;
+}
+#header {
+  background-color: #5a5959;
+  color: rgb(236, 232, 232);
+  text-align: center;
+  font-size: large;
+  width: 250px;
+  margin: auto;
+  height: 50px;
+  position: relative;
+  top: 5px;
+  padding-right: 4px;
+  box-sizing: border-box;
+}
+#header h2 {
+  position: absolute;
+  top: -18px;
+  /* right: 89px; */
+}
+#border {
+  border-bottom: rgb(15, 15, 15) 2px double;
+  width: 250px;
+  margin: 20px auto;
+}
+#tasks {
+  background-color: rgb(71, 67, 67);
+  color: rgb(236, 232, 232);
+  width: 250px;
+  margin: 20px auto;
+  border-radius: 5px;
+  line-height: 28px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+#buttons {
+  background-color: #462f40;
+  margin-top: -10px;
+  height: 40px;
+  position: relative;
+}
+#edit {
+  color: #fff;
+  background-color: rgba(119, 106, 196, 0.349);
+  padding: 5px;
+  position: absolute;
+  right: 50%;
+  text-decoration: none;
+  bottom: 0px;
+  width: 50px;
+}
+#delete {
+  color: #fff;
+  background-color: rgb(214, 81, 81);
+  padding: 5px;
+  position: absolute;
+  right: 20%;
+  text-decoration: none;
+  bottom: 0px;
+  width: 40px;
+}
+#add {
+  position: relative;
+  top: 0;
+  width: 200px;
+  margin: auto;
+  background-color: #7d179c;
+  border: 2px #9c1295 solid;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: #ca49c4 0px 0px 10px;
+}
+#add:hover {
+  box-shadow: #ca49c4 0px 0px 20px;
+}
+#add a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}

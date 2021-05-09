@@ -1,0 +1,16 @@
+@font-face {
+    font-family: vazirNormal;
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.eot?#iefix') format('embedded-opentype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff'), url('../fonts/vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+
+body {
+    direction: rtl;
+    font-family: vazirNormal;
+    background-color: #f0f0f0;
+}
+input,button,textarea{
+    font-family: vazirNormal;
+}
