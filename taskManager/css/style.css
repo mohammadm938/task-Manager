@@ -29,7 +29,8 @@ td{
   width: 300px;
   display: inline-block;
   margin-right: 5px;
-  margin-top: 10px;
+  margin-top: 40px;
+  word-wrap: break-word;
 }
 #content:hover {
   box-shadow: #462f40 0px 0px 20px;
@@ -112,4 +113,73 @@ td{
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+}
+
+.profileButtons {
+  position: absolute;
+  width: 144px;
+  margin-top: 8px;
+  background-color: #7d179c;
+  border: 2px #9c1295 solid;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: #ca49c4 0px 0px 10px;
+}
+.profileButtons:hover {
+  box-shadow: #ca49c4 0px 0px 20px;
+}
+.profileButtons a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+#left {
+  top: 10px;
+  left: 66px;
+}
+#right {
+  top: 10px;
+  right: 66px;
+}
+@media screen and (max-width: 600px) {
+  .profileButtons {
+    width: 103px;
+  }
+  #right,
+  #left {
+    top: 35px;
+  }
+  #add {
+    width: 200px;
+  }
+  #content {
+    margin-top: 53px;
+    margin-right: 25px;
+  }
+}
+@media screen and (max-width: 300px) {
+  * {
+    font-size: 12px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  #left {
+    left: -22px;
+  }
+  #add {
+    right: 43px;
+  }
+  #content {
+    margin-right: 63px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+*{
+  font-size: 15px;
+}
+h2{
+  font-size: 24px;
+}
 }
