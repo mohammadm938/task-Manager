@@ -1,8 +1,11 @@
 <?php
-include 'app/db.php';
+session_start();
+include 'app/user.php';
 $id;
 $job;
 $title;
+
+// choose job
 if ($_GET['job'] == 'add') {
     $job = 'add';
     $title = "اضافه کردن برنامه جدید";
@@ -10,12 +13,13 @@ if ($_GET['job'] == 'add') {
     $id = $_GET['id'];
     $job = 'edit';
     $title = "ویرایش";
-    $object = new db();
+    $object = new user();
     $object->setTbl("tasks");
     $results = $object->showEditData($id);
 } elseif ($_GET['job'] == 'delete') {
+    //delete choose and work do here
     $id = $_GET['id'];
-    $object = new db();
+    $object = new user();
     $object->setTbl("tasks");
     $object->deleteData($id);
     header("location:index.php");
@@ -91,25 +95,26 @@ if ($_GET['job'] == 'add') {
 </html>
 <?php 
 
-
+// if select add job this code will add task
 if (isset($_POST['add'])) {
     if (empty($_POST['title'] || $_POST['text'])) {
         echo "<script>alert('لطفا عنوان و توضیحات را کامل کنید')</script>";
     } else {
-        $object = new db();
-        $filds = ['title', 'text'];
-        $values = [$_POST['title'], $_POST['task']];
+        $object = new user();
+        $filds = ['title', 'text' , 'owner'];
+        $values = [$object->returnSafeText($_POST['title']), $object->returnSafeText($_POST['task']),$_SESSION['id']];
         $object->setTbl("tasks");
         $object->insertData($filds, $values);
         echo "<script type='text/javascript'>cheackSuccessDiv(true)</script>" ;
     }
 }
+// if select edit job this code will edit task
 if (isset($_POST['edit'])) {
     if (empty($_POST['title']) || empty($_POST['text'])) {
         echo "<script>alert('لطفا عنوان و توضیحات را کامل کنید')</script>";
     } else {
         $filds = ['title', 'text'];
-        $data = ['title' => $_POST['title'], 'text' => $_POST['text']];
+        $data = [$object->returnSafeText($_POST['title']), $object->returnSafeText($_POST['task'])];
         $object->editData($filds, $data, $id);
         echo "<script type='text/javascript'>cheackSuccessDiv(true)</script>" ;
     }

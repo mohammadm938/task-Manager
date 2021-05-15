@@ -1,0 +1,121 @@
+@import "import.css";
+
+body {
+  background-color: rgba(144, 47, 251, 255);
+}
+#content {
+  position: relative;
+  border-radius: 22px;
+  background-color: #ffffff;
+  padding: 5px;
+  width: 400px;
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 60px 20px #4c0fc2;
+  -moz-box-shadow: 0px 0px 60px 20px #4c0fc2;
+  box-shadow: 0px 0px 60px 20px #4c0fc2;
+}
+.signUp {
+  height: 510px;
+}
+.login {
+  height: 390px;
+}
+.recovery {
+  height: 340px;
+}
+input {
+  border: #fefefe 2px solid;
+  -webkit-box-shadow: 0px 0px 20px 3px #dce4fa;
+  -moz-box-shadow: 0px 0px 20px 3px #dce4fa;
+  box-shadow: 0px 0px 20px 3px #dce4fa;
+  border-radius: 20px;
+  margin-top: 30px;
+  padding: 7px;
+  padding-right: 40px;
+  width: 314px;
+  color: #9babdc;
+  transition: 0.25s;
+  box-sizing: border-box;
+}
+input:hover {
+  transition: 0.25s;
+  -webkit-box-shadow: 0px 0px 20px 3px black;
+  -moz-box-shadow: 0px 0px 20px 3px black;
+  box-shadow: 0px 0px 8px 2px #818181;
+}
+input:focus {
+  outline: none;
+  -webkit-box-shadow:0px 0px 20px 3px black;
+  -moz-box-shadow: 0px 0px 20px 3px black;
+  box-shadow: 0px 0px 8px 2px #818181;
+  color: black;
+  border: solid 2px #726ee8;
+}
+img {
+  position: relative;
+  right: 42px;
+  top: 6px;
+}
+#btn {
+  background-image: linear-gradient(
+    to left bottom,
+    #3c01f3,
+    #580aee,
+    #6c15ea,
+    #7b1fe5,
+    #8828e1
+  );
+  color: #f1e2fc;
+  font-size: 16px;
+  width: 170px;
+  transition: 0.25s;
+  padding: 7px;
+  border: #8828e1 2px solid;
+}
+#btn:hover {
+  font-weight: bold;
+  box-shadow: none;
+  width: 200px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+p {
+  color: #8796d3;
+}
+p a {
+  color: #684cf5;
+  text-decoration: none;
+}
+
+#backHome {
+  position: relative;
+  bottom: -20px;
+  width: 200px;
+  margin: auto;
+  background-color: #7d179c;
+  border: 2px #9c1295 solid;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: #ca49c4 0px 0px 10px;
+}
+#backHome:hover {
+  box-shadow: #ca49c4 0px 0px 20px;
+}
+#backHome a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  #content {
+    width: 276px;
+  }
+  input {
+    width: 238px;
+  }
+  p {
+    font-size: 13.6px;
+  }
+}

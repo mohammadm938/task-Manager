@@ -124,6 +124,8 @@ td{
   border-radius: 5px;
   text-align: center;
   box-shadow: #ca49c4 0px 0px 10px;
+  top: 200px;
+  height: 200px;
 }
 .profileButtons:hover {
   box-shadow: #ca49c4 0px 0px 20px;
@@ -132,31 +134,77 @@ td{
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  position: absolute;
+  top: 72px;
+  left: 46px;
+  font-size: 30px;
 }
-#left {
-  top: 10px;
-  left: 66px;
+
+#right{
+  right: 328px;
 }
-#right {
-  top: 10px;
-  right: 66px;
+#left{
+  left: 328px;
+} 
+#left a{
+  left: 26px;
 }
-@media screen and (max-width: 600px) {
-  .profileButtons {
-    width: 103px;
-  }
-  #right,
-  #left {
-    top: 35px;
-  }
-  #add {
-    width: 200px;
-  }
-  #content {
-    margin-top: 53px;
-    margin-right: 25px;
-  }
+#profile{
+  visibility: hidden;
+  position: relative;
+  right: 0;
 }
+#logout {
+  position: absolute;
+  top: 40px;
+  left: 6px;
+  width: 200px;
+  margin-top: 8px;
+  background-color: #7d179c;
+  border: 2px #9c1295 solid;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: #ca49c4 0px 0px 10px;
+}
+#logout:hover {
+  box-shadow: #ca49c4 0px 0px 20px;
+}
+#logout a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hrs{
+  background-color: black;
+  width: 414px;
+  height: 10px;
+  position: relative;
+  top: 245px;
+  z-index: -1;
+}
+.hrs2{
+  top: 120px;
+}
+.divText{
+  z-index: 0;
+  position: relative;
+  top: 254px;
+  right: 468px;
+  background: rgb(127,0,255);
+  background: linear-gradient(
+90deg
+, rgba(127,0,255,1) 0%, rgba(225,0,255,1) 100%);
+  width: 414px;
+  height: 97px;
+  font-size: 20px;
+}
+.textBetweenHrs{
+  color: #fff;
+  position: absolute;
+  top: 28px;
+  right: 18px;
+}
+
 @media screen and (max-width: 300px) {
   * {
     font-size: 12px;
@@ -175,11 +223,92 @@ td{
   }
 }
 
-@media screen and (max-width: 500px) {
-*{
-  font-size: 15px;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  *{
+    font-size: 15px;
+  }
+  h2{
+    font-size: 24px;
+  }
+  .divText{
+    border: black 4px solid;
+    width: 250px;
+    right: 75px;
+    bottom: 0;
+  }
+  .profileButtons {
+    width: 103px;
+  }
+  #right,
+  #left {
+    top: 164px;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+  #left{
+    left:196px;
+  }
+  #right a , #left a {
+    top: 36px;
+  }
+  #left a{
+    left: 25px;
+  }
+  #right a{
+    right: 38px;
+  }
+  .profileButtons a{
+    font-size: 18px;
+  }
+  #add {
+    width: 200px;
+  }
+  #content {
+    margin-top: 53px;
+    margin-right: 25px;
+  }
+  .divText{
+    /* top: 152px;
+    right: 118px; */
+    width: 251px;
+    height: 71px;
+    margin: auto;
+  }
+  .divText span{
+    top: 22px;
+    right: 12px;
+    font-size: 13.6px;
+  }
+  .hrs{
+    visibility: hidden;
+  }
+  /* .hrs2{
+    top: -34px;
+    right: 192px;
+  } */
 }
-h2{
-  font-size: 24px;
+
+@media only screen and (min-width: 500px) {
+  .divText{
+    visibility: hidden;
+  }
+  #left{
+    left: 6px;
+  }
+  #right{
+    right: 6px;
+  }
 }
+@media only screen and (min-width: 1000px){
+  .divText{
+    visibility: visible;
+  }
+  #right{
+    right: 328px;
+  }
+  #left{
+    left: 328px;
+  } 
 }

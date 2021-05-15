@@ -79,6 +79,27 @@ class db
         return $result;
     }
 
+    public function searchData($name, $value)
+    {
+        $sql = $this->pdo->prepare("SELECT * FROM {$this->tbl} WHERE $name = :value ");
+        $sql->bindParam(":value", $value);
+        $sql->execute();
+        $results = $sql->fetch(PDO::FETCH_OBJ);
+        // return $sql->fetchObject(__CLASS__);
+        return $results;
+    }
+
+    public function searchDatas($name, $value)
+    {
+        $sql = $this->pdo->prepare("SELECT * FROM {$this->tbl} WHERE $name = :value ");
+        $sql->bindParam(":value", $value);
+        $sql->execute();
+        $results = $sql->fetchAll(PDO::FETCH_OBJ);
+        // return $sql->fetchObject(__CLASS__);
+        return $results;
+    }
+
+
     public function returnSafeText($text){
             $text = strip_tags($text);
             $text = trim($text);
